@@ -18,7 +18,9 @@ public class TraderJanesPrizes {
 
         int min = -1;   //holds the current minimum of all the submissions
         int max = -1;   //holds the current maximum of all the submissions
-        int prizes = 0; //stores the total value of all prizes given out
+
+        //NOTE: Making this a LONG to prevent failing test cases, because the total prizes might be greater than Integer.MAX_VALUE
+        long prizes = 0; //stores the total value of all prizes given out
 
         //For each day i...
         for (int i = 0; i < totalDays; i++){
